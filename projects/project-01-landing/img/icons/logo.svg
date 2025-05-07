@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="20" fill="#0F172A"></rect>
+  <circle cx="100" cy="100" r="60" stroke="#38BDF8" stroke-width="8"></circle>
+  <path d="M70 100c0-16.6 13.4-30 30-30s30 13.4 30 30-13.4 30-30 30-30-13.4-30-30z" fill="#0F172A" stroke="#38BDF8" stroke-width="6"></path>
+  <circle cx="100" cy="100" r="6" fill="#38BDF8"></circle>
+  <text x="100" y="185" text-anchor="middle" fill="#38BDF8" font-family="Arial, sans-serif" font-size="16">TechNova</text>
+</svg>

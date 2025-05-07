@@ -1,0 +1,162 @@
+/* Загальні налаштування */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1a202c;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn--primary {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: #3730a3;
+}
+
+/* HERO */
+.hero {
+  padding: 5rem 0;
+  text-align: center;
+  background-color: #eef2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* ABOUT */
+.about {
+  padding: 4rem 0;
+  background-color: #f9fafb;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about__img {
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+/* FEATURES */
+.features {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+.features__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.features__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.features__item {
+  background: #f0f4f8;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  color: #4f46e5; /* синій, можеш змінити */
+  margin: 0 auto;
+}
+
+
+/* CTA */
+.cta {
+  padding: 4rem 0;
+  background-color: #4f46e5;
+  color: #fff;
+  text-align: center;
+}
+.cta__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero__content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero__content p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero, .about, .features, .cta {
+    padding: 2rem;
+  }
+  .cta {
+    max-width: 100%;
+  }
+
+  .hero__img {
+    display: none;
+  }
+
+  .features__item {
+    padding: 1rem;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #a346e5; /* синій, можеш змінити */
+    margin: 0 auto;
+  }
+}
