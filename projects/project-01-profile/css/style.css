@@ -1,0 +1,56 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:&display=swap");
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.profile {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.profile h1 {
+  margin: 1rem 0 0.5rem;
+}
+
+.profile p {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
