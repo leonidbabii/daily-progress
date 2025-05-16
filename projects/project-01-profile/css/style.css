@@ -1,5 +1,4 @@
 @import url(reset.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto:&display=swap");
 
 html,
 body {
@@ -54,3 +53,36 @@ button {
 button:hover {
   background: #0056b3;
 }
+
+
+.container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.left img {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.text {
+  flex: 1;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left img {
+    margin-bottom: 1rem;
+  }
+}
+
