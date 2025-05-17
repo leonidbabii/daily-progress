@@ -3,20 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <title>Леонід Бабій – Frontend</title>
+  <link href="css/reset.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="profile">
+<div class="wrapper">
+  <header class="header">
     <div class="container">
-       <div class="content">
-       <img src="https://picsum.photos/300" alt="Портрет Леоніда">
+      <div class="header__nav">
+ <a href="#">Леонід Бабій</a>
+    <nav class="nav">
+      <ul class="menu__list list">
+        <li class="list__item">
+          <a class="list__link" href="#">
+            Про мене
+          </a>
+        </li>
+        <li class="list__item">
+          <a class="list__link" href="#">
+            Проєкти
+          </a>
+        </li>
+        <li class="list__item">
+          <a class="list__link" href="#">
+            Контакти
+          </a>
+        </li>
+      </ul>
+    </nav>
+      </div>
+   
     </div>
-   <div class="text">
-    <h1 class="title">Леонід Бабій</h1>
-    <p class="descr">Я навчаюсь фронтенду, щоб стати незалежним розробником</p>
-    <button class="button">Зв'язатися</button>
-   </div>
-    </div>
-  </div>
+  </header>
+  <main class="page">
+    <section class="about">
+      <div class="container">
+        <div class="about__box"> 
+        <div class="text__descr">
+          <h1 class="about__title">Про мене</h1>
+          <p class="about__text">
+            Я почав свій шлях у фронтенді, щоб змінити професію та повністю перейти на дистанційну роботу. Моя мета — стати впевненим розробником, який створює сучасні, швидкі й зручні інтерфейси, за які клієнти готові платити.
+          </p>
+        </div>
+         <div class="about__content">
+          <img src="img/portfolio.jpg" alt="it man">
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="container">
+        <h3 class="title">
+          Проєкти
+        </h3>
+        <div class="projects__box project">
+          <div class="project__item">
+            <h3 class="project__title"></h3>
+            <p class="project__descr"></p>
+            <a class="project__btn" href="#">
+              Детальніше
+            </a>
+          </div>
+          <div class="project__item">
+            <h3 class="project__title"></h3>
+            <p class="project__descr"></p>
+            <a class="project__btn" href="#">
+              Детальніше
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts__box">
+        <a class="contact__mail" href="mailto:frontendmonte@gmail.com">frontendmonte@gmail.com</a>
+        <a href="mailto:https://github.com/leonidbabii">
+          https://github.com/leonidbabii
+        </a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__descr">
+        <p class="footer__text">
+          Леонід Бабій | 2025
+        </p>
+        <p class="footer__copy">
+          “Розроблено з ❤️”
+        </p>
+      </div>
+    </footer>
+  </main>
+</div>
 </body>
 </html>
