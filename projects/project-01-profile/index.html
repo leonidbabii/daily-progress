@@ -52,28 +52,53 @@
       </div>
     </section>
     <section class="projects">
-      <div class="container">
-        <h3 class="title">
-          Проєкти
-        </h3>
-        <div class="projects__box project">
-          <div class="project__item">
-            <h3 class="project__title"></h3>
-            <p class="project__descr"></p>
-            <a class="project__btn" href="#">
-              Детальніше
-            </a>
-          </div>
-          <div class="project__item">
-            <h3 class="project__title"></h3>
-            <p class="project__descr"></p>
-            <a class="project__btn" href="#">
-              Детальніше
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h2 class="project__title">Проєкти</h2>
+    <div class="project__box">
+       <div class="project-card card">
+      <h3 class="card__title">Проєкт 01</h3>
+      <button class="details-btn" data-modal="modal1">Детальніше</button>
+    </div>
+    <div class="project-card card">
+      <h3>Проєкт 02</h3>
+      <button class="details-btn" data-modal="modal2">Детальніше</button>
+    </div>
+    <div class="project-card card">
+      <h3>Проєкт 03</h3>
+      <button class="details-btn" data-modal="modal3">Детальніше</button>
+    </div>
+    </div>
+  </section>
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 class="card__title">Проєкт - 01 — опис</h3>
+      <p>Це проєкт, створений для тренування HTML, CSS, JS та адаптиву.</p>
+    </div>
+  </div>
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 class="card__title">Проєкт - 02 — опис</h3>
+      <p>Це проєкт, створений для тренування HTML, CSS, JS та адаптиву.</p>
+    </div>
+  </div>
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Проєкт - 03 — опис</h3>
+      <p>Це проєкт, створений для тренування HTML, CSS, JS та адаптиву.</p>
+    </div>
+  </div>
+
+  <section class="contact">
+    <h2>Зв'язок зі мною</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Ваше ім’я" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <textarea id="message" placeholder="Повідомлення" required></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
     <section class="contacts">
       <div class="contacts__box">
         <a class="contact__mail" href="mailto:frontendmonte@gmail.com">frontendmonte@gmail.com</a>
@@ -94,5 +119,6 @@
     </footer>
   </main>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>
