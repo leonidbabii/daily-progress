@@ -161,6 +161,18 @@ button {
   padding: 120px 0;
   max-width: 500px;
 }
+
+.contacts__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding-top: 100px;
+}
+.contact__mail, .contact__profile {
+  font-size: 20px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -173,6 +185,21 @@ input, textarea {
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  min-height: 350px;
+  max-width: 100%;
+}
+
+.footer__text {
+  padding-bottom: 150px;
 }
 
 
