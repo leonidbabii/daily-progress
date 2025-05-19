@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Леонід Бабій – Frontend</title>
   <link href="css/reset.css" rel="stylesheet">
@@ -46,7 +47,7 @@
           </p>
         </div>
          <div class="about__content">
-          <img src="img/portfolio.jpg" alt="it man">
+          <img src="img/portfolio.jpg" alt="Моє фото">
         </div>
         </div>
       </div>
@@ -59,11 +60,11 @@
       <button class="details-btn" data-modal="modal1">Детальніше</button>
     </div>
     <div class="project-card card">
-      <h3>Проєкт 02</h3>
+      <h3 class="card__title">Проєкт 02</h3>
       <button class="details-btn" data-modal="modal2">Детальніше</button>
     </div>
     <div class="project-card card">
-      <h3>Проєкт 03</h3>
+      <h3 class="card__title">Проєкт 03</h3>
       <button class="details-btn" data-modal="modal3">Детальніше</button>
     </div>
     </div>
@@ -85,7 +86,7 @@
   <div class="modal" id="modal3">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h3>Проєкт - 03 — опис</h3>
+      <h3 class="card__title">Проєкт - 03 — опис</h3>
       <p>Це проєкт, створений для тренування HTML, CSS, JS та адаптиву.</p>
     </div>
   </div>
@@ -96,8 +97,13 @@
       <input type="text" id="name" placeholder="Ваше ім’я" required />
       <input type="email" id="email" placeholder="Email" required />
       <textarea id="message" placeholder="Повідомлення" required></textarea>
-      <button type="submit">Надіслати</button>
+      <button type="submit" aria-label="">Надіслати</button>
     </form>
+
+          <!-- Повідомлення про успішну відправку -->
+<div id="form-message" class="message hidden">
+  Повідомлення надіслано!
+</div>
 
     <div class="contacts__box">
         <a class="contact__mail" href="mailto:someone@example.com">frontendmonte@gmail.com</a>

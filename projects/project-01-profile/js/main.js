@@ -1,72 +1,52 @@
-// Модальне вікно
-const modal = document.getElementById('modal');
-const openBtn = document.querySelector('.details-btn');
-const closeBtn = document.querySelector('.close');
+// === МОДАЛЬНІ ВІКНА ===
 
-openBtn.addEventListener('click', () => {
-  modal.style.display = 'block';
-});
+function openModal(id) {
+  const modal = document.getElementById(id);
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+}
 
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
+function closeModal(modalEl) {
+  modalEl.classList.remove("active");
+  modalEl.setAttribute("aria-hidden", "true");
+}
 
-window.addEventListener('click', (e) => {
-  if (e.target == modal) modal.style.display = 'none';
-});
-
-// Валідація форми
-const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
-
-  if (!name || !email || !message) {
-    alert('Будь ласка, заповніть всі поля.');
-    return;
-  }
-
-  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (!emailPattern.test(email)) {
-    alert('Некоректний email.');
-    return;
-  }
-
-  alert('Повідомлення надіслано!');
-  form.reset();
-});
-
-
-
-// Відкриття модалок
-document.querySelectorAll('.details-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const modalId = btn.dataset.modal;
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'block';
-  });
+// Відкриття
+document.querySelectorAll(".open-modal").forEach(btn => {
+  btn.addEventListener("click", () => openModal(btn.dataset.modal));
 });
 
 // Закриття по хрестику
-document.querySelectorAll('.close').forEach(close => {
-  close.addEventListener('click', () => {
-    close.closest('.modal').style.display = 'none';
+document.querySelectorAll(".close-modal").forEach(btn => {
+  btn.addEventListener("click", () => closeModal(btn.closest(".modal")));
+});
+
+// Закриття по кліку поза вікном
+document.querySelectorAll(".modal").forEach(modal => {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal(modal);
   });
 });
 
-// Закриття при кліку поза вікном
-window.addEventListener('click', e => {
-  if (e.target.classList.contains('modal')) {
-    e.target.style.display = 'none';
-  }
+
+// === ФОРМА ===
+
+const form = document.getElementById("contact-form");
+const messageBox = document.getElementById("form-message");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = form.elements["name"].value.trim();
+  const email = form.elements["email"].value.trim();
+  const message = form.elements["message"].value.trim();
+
+  if (!name || !email.includes("@") || !message) return;
+
+  form.reset();
+  messageBox.classList.remove("hidden");
+
+  setTimeout(() => {
+    messageBox.classList.add("hidden");
+  }, 3000);
 });
-
-
-
-
-
-
