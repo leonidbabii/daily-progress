@@ -1,9 +1,0 @@
-#!/bin/bash
-DATE=$(date "+%Y-%m-%d")
-LOG_FILE="logs/log-$DATE.md"
-
-if [ ! -f "$LOG_FILE" ]; then
-  echo "# Щоденний лог — $DATE" > "$LOG_FILE"
-  echo "- Коміт: $(git log -1 --pretty=%B)" >> "$LOG_FILE"
-  echo "🕘 Створено автоматично при коміті." >> "$LOG_FILE"
-fi
