@@ -66,17 +66,12 @@ body {
   justify-content: space-between;
 }
 
-
-.nav {
-}
 .menu__list {
   display: flex;
   gap: 0.9375rem;
 }
 
-.menu__item {
 
-}
 .menu__link {
 cursor: pointer;
 color: var(--text-color);
