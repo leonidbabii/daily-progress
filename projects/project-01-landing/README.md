@@ -1,0 +1,1 @@
+Використав семантичні теги <header>, <main>, <section>, <footer>, <article>, <nav>
